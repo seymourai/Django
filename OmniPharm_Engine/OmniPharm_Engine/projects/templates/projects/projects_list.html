@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Projects
+{% endblock %}
+
+{% block content %}
+    <section>
+    <h1>Projects</h1>
+
+    {% for project in projects %}
+        <article class="project">
+            <h2>
+                <a href="{%  url 'projects:page' slug=project.slug %}">
+                    {{ project.title }}
+                </a>
+            </h2>
+            <p>{{ project.date }} by {{ project.author }}</p>
+            <p>{{ project.body }}</p>
+        </article>
+    {% endfor %}
+</section>
+{% endblock %}

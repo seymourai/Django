@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    {{ project.title }}
+{% endblock %}
+
+{% block content %}
+    <section>
+        <img 
+            class="banner" 
+            src="{{ project.banner.url }}" 
+            alt="{{ project.title }}"
+        />
+        <h1>{{ project.title }}</h1>
+        <p>{{ project.date }}</p>
+        <p>{{ project.body }}</p>
+    </section>
+{% endblock %}
